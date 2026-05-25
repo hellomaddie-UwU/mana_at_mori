@@ -5,6 +5,8 @@ export { default as Card } from './components/Card/Card.svelte';
 export { default as Icon } from './components/Icon/Icon.svelte';
 export { default as Input } from './components/Input/Input.svelte';
 export { default as Modal } from './components/Modal/Modal.svelte';
+export { default as PomodoroDisplay } from './components/PomodoroDisplay/PomodoroDisplay.svelte';
+export { default as PomodoroSettings } from './components/PomodoroSettings/PomodoroSettings.svelte';
 export { default as SegmentControl } from './components/SegmentControl/SegmentControl.svelte';
 export { default as Select } from './components/Select/Select.svelte';
 export { default as Textarea } from './components/Textarea/Textarea.svelte';

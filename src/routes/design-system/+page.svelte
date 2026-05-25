@@ -7,6 +7,8 @@
 		Icon,
 		Input,
 		Modal,
+		PomodoroDisplay,
+		PomodoroSettings,
 		SegmentControl,
 		Select,
 		Textarea
@@ -17,6 +19,9 @@
 	let sampleNote = $state('Please leave by the tea shelf.');
 	let samplePriority = $state('normal');
 	let sampleMode = $state('preview');
+	let sampleFocusMinutes = $state(25);
+	let sampleShortBreakMinutes = $state(5);
+	let sampleLongBreakMinutes = $state(15);
 	let modalOpen = $state(false);
 	let lastModalCloseReason = $state('none');
 	let showDismissibleAlert = $state(true);
@@ -36,7 +41,7 @@
 
 <div class="ds-container design-system-page">
 	<header class="hero">
-		<Badge tone="primary">Design System v1.1</Badge>
+		<Badge tone="primary">Design System v1.2</Badge>
 		<h1>Mana at Mori UI Source of Truth</h1>
 		<p class="ds-muted">
 			Use this page as the canonical reference for tokens, component APIs, states, and migration
@@ -390,6 +395,106 @@
 							<tr
 								><td><code>onDismiss</code></td><td>() =&gt; void</td><td>undefined</td><td
 									><code>{'onDismiss={onCloseAlert}'}</code></td
+								></tr
+							>
+						</tbody>
+					</table>
+				</div>
+			</Card>
+		</section>
+
+		<section id="component-pomodoro-display" class="component-block">
+			<Card
+				title="PomodoroDisplay"
+				subtitle="Timer-focused status card for focus/break flows with progress and summary metrics"
+			>
+				<PomodoroDisplay
+					modeLabel="Focus"
+					modeTone="primary"
+					modeDescription="Use this when a page needs a large timer readout and next-session context."
+					statusLabel="Paused"
+					statusTone="warning"
+					formattedTime="12:34"
+					progress={49}
+					completedWorkSessions={3}
+					nextLabel="Long Break"
+					isRunning={false}
+				/>
+				<div class="ds-api-wrap">
+					<table class="ds-api-table">
+						<thead>
+							<tr><th>Prop</th><th>Type</th><th>Default</th><th>Example</th></tr>
+						</thead>
+						<tbody>
+							<tr
+								><td><code>modeLabel</code></td><td>string</td><td>required</td><td
+									><code>modeLabel="Focus"</code></td
+								></tr
+							>
+							<tr
+								><td><code>modeTone</code></td><td
+									>neutral | primary | success | warning | danger</td
+								><td>primary</td><td><code>modeTone="warning"</code></td></tr
+							>
+							<tr
+								><td><code>formattedTime</code></td><td>string</td><td>required</td><td
+									><code>formattedTime="25:00"</code></td
+								></tr
+							>
+							<tr
+								><td><code>progress</code></td><td>number</td><td>0</td><td
+									><code>progress={42}</code></td
+								></tr
+							>
+							<tr
+								><td><code>nextLabel</code></td><td>string</td><td>required</td><td
+									><code>nextLabel="Short Break"</code></td
+								></tr
+							>
+						</tbody>
+					</table>
+				</div>
+			</Card>
+		</section>
+
+		<section id="component-pomodoro-settings" class="component-block">
+			<Card
+				title="PomodoroSettings"
+				subtitle="Compact settings card for editable focus and break durations"
+			>
+				<PomodoroSettings
+					bind:workMinutes={sampleFocusMinutes}
+					bind:shortBreakMinutes={sampleShortBreakMinutes}
+					bind:longBreakMinutes={sampleLongBreakMinutes}
+				/>
+				<p class="ds-muted">
+					Sample values: {sampleFocusMinutes}/{sampleShortBreakMinutes}/{sampleLongBreakMinutes}
+					minutes
+				</p>
+				<div class="ds-api-wrap">
+					<table class="ds-api-table">
+						<thead>
+							<tr><th>Prop</th><th>Type</th><th>Default</th><th>Example</th></tr>
+						</thead>
+						<tbody>
+							<tr
+								><td><code>workMinutes</code></td><td>number (bindable)</td><td>25</td><td
+									><code>{'bind:workMinutes={focusMinutes}'}</code></td
+								></tr
+							>
+							<tr
+								><td><code>shortBreakMinutes</code></td><td>number (bindable)</td><td>5</td><td
+									><code>{'bind:shortBreakMinutes={shortBreakMinutes}'}</code></td
+								></tr
+							>
+							<tr
+								><td><code>longBreakMinutes</code></td><td>number (bindable)</td><td>15</td><td
+									><code>{'bind:longBreakMinutes={longBreakMinutes}'}</code></td
+								></tr
+							>
+							<tr
+								><td><code>disabled</code></td><td>boolean</td><td>false</td><td
+									><code>disabled={true}</code></td
 								></tr
 							>
 						</tbody>
