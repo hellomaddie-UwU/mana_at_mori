@@ -6,6 +6,7 @@
 	type BadgeTone = 'neutral' | 'primary' | 'success' | 'warning' | 'danger';
 
 	let {
+		sessionTitle = 'Current session',
 		modeLabel,
 		modeTone = 'primary',
 		modeDescription,
@@ -17,6 +18,7 @@
 		nextLabel,
 		isRunning = false
 	}: {
+		sessionTitle?: string;
 		modeLabel: string;
 		modeTone?: BadgeTone;
 		modeDescription: string;
@@ -32,7 +34,7 @@
 	const clampedProgress = $derived(Math.max(0, Math.min(100, progress)));
 </script>
 
-<Card title="Current session" subtitle="Manual-start Pomodoro flow with customizable durations.">
+<Card title={sessionTitle} subtitle="Manual-start Pomodoro flow with customizable durations.">
 	<div class="ds-pomodoro-display">
 		<div class="ds-pomodoro-display__header">
 			<div class="ds-pomodoro-display__badges">
