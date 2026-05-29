@@ -132,7 +132,7 @@
 .ds-pomodoro-display__progress-bar {
 	height: 100%;
 	border-radius: inherit;
-	background: linear-gradient(90deg, var(--ds-color-primary), var(--ds-color-success));
+	background: linear-gradient(90deg, var(--ds-color-primary), var(--ds-color-danger));
 	transition: width var(--ds-motion-base);
 }
 

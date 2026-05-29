@@ -10,8 +10,9 @@ body {
 	font-size: var(--ds-text-md);
 	line-height: var(--ds-line-normal);
 	background:
-		radial-gradient(circle at 0% 0%, rgb(33 85 205 / 7%) 0%, transparent 45%),
-		radial-gradient(circle at 100% 100%, rgb(167 47 47 / 7%) 0%, transparent 35%),
+		radial-gradient(circle at 0% 0%, rgb(197 216 198 / 42%) 0%, transparent 36%),
+		radial-gradient(circle at 100% 0%, rgb(184 95 91 / 18%) 0%, transparent 30%),
+		radial-gradient(circle at 100% 100%, rgb(95 125 102 / 10%) 0%, transparent 26%),
 		var(--ds-color-bg);
 	color: var(--ds-color-text);
 	min-height: 100%;

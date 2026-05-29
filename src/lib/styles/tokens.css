@@ -2,20 +2,22 @@
 	--ds-font-sans: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
 	--ds-font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
 
-	--ds-color-bg: #f8f7f4;
+	--ds-color-bg: #f7f2e7;
 	--ds-color-surface: #ffffff;
-	--ds-color-surface-2: #f2f0eb;
-	--ds-color-text: #1f2430;
-	--ds-color-text-muted: #566070;
-	--ds-color-border: #d7d2c7;
-	--ds-color-focus: #0b5fff;
+	--ds-color-surface-2: #ecf3ec;
+	--ds-color-text: #1e2a34;
+	--ds-color-text-muted: #7b8d9b;
+	--ds-color-border: #c5d8c6;
+	--ds-color-focus: #b85f5b;
+	--ds-color-code-bg: #1e2a34;
 
-	--ds-color-primary: #2155cd;
-	--ds-color-primary-hover: #1b47ab;
-	--ds-color-primary-soft: #e7edff;
-	--ds-color-success: #216b4f;
-	--ds-color-warning: #9a6500;
-	--ds-color-danger: #a72f2f;
+	--ds-color-secondary: #c5d8c6;
+	--ds-color-primary: #b85f5b;
+	--ds-color-primary-hover: #a1514e;
+	--ds-color-primary-soft: #f0d2d0;
+	--ds-color-success: #c5d8c6;
+	--ds-color-warning: #c88f4a;
+	--ds-color-danger: #4f2c2e;
 
 	--ds-space-1: 0.25rem;
 	--ds-space-2: 0.5rem;
