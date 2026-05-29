@@ -1020,6 +1020,7 @@
 										<Icon name="grip-vertical" decorative={true} tone="muted" />
 									</span>
 									<input
+										class="pomodoro-page__task-toggle"
 										type="checkbox"
 										checked={item.completed}
 										onchange={() => toggleChecklistItem(item.id)}
@@ -1214,6 +1215,45 @@
 	.pomodoro-page__task-copy {
 		display: grid;
 		gap: 0.25rem;
+	}
+
+	.pomodoro-page__task-toggle {
+		appearance: none;
+		width: 18px;
+		height: 18px;
+		border: 1.5px solid var(--ds-color-border);
+		border-radius: var(--ds-radius-sm);
+		background: var(--ds-color-surface);
+		cursor: pointer;
+		position: relative;
+		margin-top: 0.15rem;
+		transition:
+			border-color var(--ds-motion-base),
+			background-color var(--ds-motion-base),
+			box-shadow var(--ds-motion-base);
+	}
+
+	.pomodoro-page__task-toggle:checked {
+		background: var(--ds-color-primary);
+		border-color: var(--ds-color-primary);
+	}
+
+	.pomodoro-page__task-toggle:checked::after {
+		content: '';
+		position: absolute;
+		left: 5px;
+		top: 1px;
+		width: 5px;
+		height: 10px;
+		border: 2px solid #fff;
+		border-top: none;
+		border-left: none;
+		transform: rotate(45deg);
+	}
+
+	.pomodoro-page__task-toggle:focus-visible {
+		outline: none;
+		box-shadow: 0 0 0 3px color-mix(in srgb, var(--ds-color-focus), white 75%);
 	}
 
 	.pomodoro-page__task-title {
